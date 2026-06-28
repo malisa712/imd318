@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.1.12, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/whatsapp20image202026-06-2620at2012.16.3720am201-295x173.png" type="image/x-icon">
+  
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Satisfy:400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy:400&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Cinzel:400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel:400,500,600,700,800,900&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Karla:200,300,400,500,600,700,800,200i,300i,400i,500i,600i,700i,800i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:200,300,400,500,600,700,800,200i,300i,400i,500i,600i,700i,800i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=FWeC1Z"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=FWeC1Z" type="text/css">
+  
+  <style>
+    /* CSS Variables for navbar height */
+    :root {
+      --navbar-height: 140px;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('assets/images/background8.jpeg');
+      background-color: #F5F0ED;
+      font-family: 'Karla', sans-serif;
+      color: #1a1a1a;
+      padding-top: var(--navbar-height);
+    }
+
+    /* Fix navbar positioning */
+    nav.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ensure menu section doesn't have extra margin */
+    section.menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cart-container {
+      min-height: 70vh;
+      padding: 40px 20px;
+      width: 100%;
+      margin-top: 0;
+      background-color: rgba(245, 242, 235, 0.8);
+    }
+
+    .cart-title {
+      font-family: 'Cinzel', serif;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 28px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+    
+    .cart-item {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F9F6F3 100%);
+      border: 2px solid #C99797;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      box-shadow: 0 4px 15px rgba(201, 151, 151, 0.15);
+      transition: all 0.3s ease;
+    }
+    
+    .cart-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(201, 151, 151, 0.25);
+      border-color: #B88888;
+    }
+    
+    .cart-item-image {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #C99797;
+    }
+    
+    .cart-item-details {
+      flex: 1;
+    }
+    
+    .cart-item-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.5px;
+    }
+    
+    .cart-item-price {
+      font-size: 18px;
+      color: #C99797;
+      font-weight: 900;
+      margin-bottom: 10px;
+      font-family: 'Karla', sans-serif;
+    }
+    
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    
+    .quantity-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .quantity-btn {
+      width: 36px;
+      height: 36px;
+      border: 2px solid #C99797;
+      background: white;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      color: #1a1a1a;
+      font-family: 'Karla', sans-serif;
+    }
+    
+    .quantity-btn:hover {
+      background: #F5F0ED;
+      border-color: #B88888;
+    }
+    
+    .quantity-value {
+      min-width: 50px;
+      text-align: center;
+      font-weight: 700;
+      color: #1a1a1a;
+      font-family: 'Karla', sans-serif;
+    }
+    
+    .remove-btn {
+      background: linear-gradient(135deg, #C99797 0%, #B88888 100%);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      font-family: 'Karla', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .remove-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(201, 151, 151, 0.3);
+    }
+    
+    .cart-summary {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F9F6F3 100%);
+      border: 2px solid #C99797;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: 0 4px 15px rgba(201, 151, 151, 0.15);
+      position: sticky;
+      top: calc(var(--navbar-height) + 20px);
+    }
+
+    .cart-summary h4 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 25px;
+      color: #1a1a1a;
+      font-weight: 700;
+      border-bottom: 3px solid #C99797;
+      padding-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 15px;
+      font-family: 'Karla', sans-serif;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .summary-row span:last-child {
+      text-align: right;
+    }
+    
+    .summary-row.total {
+      border-top: 2.5px solid #C99797;
+      padding-top: 18px;
+      font-size: 20px;
+      font-weight: 900;
+      color: #C99797;
+      margin-top: 18px;
+    }
+    
+    .checkout-btn {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #C99797 0%, #B88888 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: all 0.3s ease;
+      font-family: 'Karla', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .checkout-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(201, 151, 151, 0.35);
+    }
+
+    .checkout-btn:disabled {
+      background: linear-gradient(135deg, #D0A9A9 0%, #C99797 100%);
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .continue-shopping-btn {
+      width: 100%;
+      padding: 14px;
+      background: white;
+      color: #C99797;
+      border: 2.5px solid #C99797;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 12px;
+      transition: all 0.3s ease;
+      font-family: 'Karla', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .continue-shopping-btn:hover {
+      background: #F5F0ED;
+      box-shadow: 0 4px 12px rgba(201, 151, 151, 0.2);
+    }
+    
+    .empty-cart {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F9F6F3 100%);
+      border: 2px solid #C99797;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+    
+    .empty-cart-icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: #C99797;
+    }
+    
+    .empty-cart h3 {
+      font-size: 24px;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    
+    .empty-cart p {
+      color: #666;
+      margin-bottom: 30px;
+      font-family: 'Karla', sans-serif;
+      font-size: 15px;
+    }
+
+    .empty-cart .continue-shopping-btn {
+      display: inline-block;
+      width: auto;
+      padding: 12px 40px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      :root {
+        --navbar-height: 120px;
+      }
+
+      body {
+        padding-top: var(--navbar-height);
+      }
+
+      .cart-summary {
+        position: static;
+        top: auto;
+        margin-top: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --navbar-height: 100px;
+      }
+
+      body {
+        padding-top: var(--navbar-height);
+      }
+
+      .cart-container {
+        padding: 20px 15px;
+      }
+
+      .cart-item {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .cart-item-image {
+        width: 100%;
+        height: 200px;
+      }
+
+      .cart-title {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      :root {
+        --navbar-height: 90px;
+      }
+
+      body {
+        padding-top: var(--navbar-height);
+      }
+
+      .cart-container {
+        padding: 15px 10px;
+      }
+
+      .cart-item {
+        padding: 15px;
+        gap: 15px;
+      }
+
+      .quantity-control {
+        flex-wrap: wrap;
+      }
+
+      .checkout-btn, .continue-shopping-btn {
+        font-size: 13px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <section data-bs-version="5.1" class="menu menu3 cid-vnC2B9Omwc" once="menu" id="menu03-1l">
+    <nav class="navbar navbar-dropdown navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="index.html">
+              <img src="assets/images/whatsapp20image202026-06-2620at2012.16.3720am201-295x173.png" alt="logo" style="height: 5rem;">
+            </a>
+          </span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="aboutus.html">About us</a>
+            </li>
+          </ul>
+          <div class="icons-menu">
+            <a class="iconfont-wrapper" href="contact.html">
+              <span class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
+            </a>
+            <a class="iconfont-wrapper" href="emel.html">
+              <span class="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
+            </a>
+            <a class="iconfont-wrapper" href="location.html">
+              <span class="p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span>
+            </a>
+            <a class="iconfont-wrapper" href="cart.html" id="cartIcon">
+              <span class="p-2 mbr-iconfont mobi-mbri-shopping-cart mobi-mbri"></span>
+              <span id="cartBadge" style="position: absolute; background: #5c1e1e; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-top: -10px; margin-left: 8px;">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart-container">
+    <div class="container-fluid" style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="cart-title"><strong>Shopping Cart</strong></h2>
+      
+      <div class="row">
+        <!-- Cart Items -->
+        <div class="col-12 col-lg-8">
+          <div id="cartItems">
+            <!-- Cart items will be inserted here -->
+          </div>
+          <div id="emptyCartMessage" style="display: none;">
+            <div class="empty-cart">
+              <div class="empty-cart-icon">🛒</div>
+              <h3>Your Cart is Empty</h3>
+              <p>Add some delicious items to get started!</p>
+              <button class="continue-shopping-btn" onclick="window.location.href='menu.html'">CONTINUE SHOPPING</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cart Summary -->
+        <div class="col-12 col-lg-4">
+          <div class="cart-summary">
+            <h4><strong>Order Summary</strong></h4>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="subtotal">RM 0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span id="shipping">RM 5.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Tax (6%)</span>
+              <span id="tax">RM 0.00</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span id="total">RM 0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" onclick="proceedToCheckout()">PROCEED TO CHECKOUT</button>
+            <button class="continue-shopping-btn" onclick="window.location.href='menu.html'">CONTINUE SHOPPING</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Initialize cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Display cart items
+    function displayCart() {
+      const cartItemsContainer = document.getElementById('cartItems');
+      const emptyCartMessage = document.getElementById('emptyCartMessage');
+      const checkoutBtn = document.getElementById('checkoutBtn');
+
+      cartItemsContainer.innerHTML = '';
+
+      if (cart.length === 0) {
+        emptyCartMessage.style.display = 'block';
+        checkoutBtn.disabled = true;
+        updateSummary();
+        return;
+      }
+
+      emptyCartMessage.style.display = 'none';
+      checkoutBtn.disabled = false;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        const cartItemHTML = `
+          <div class="cart-item">
+            <img src="${item.image || 'assets/images/placeholder.jpg'}" alt="${item.name}" class="cart-item-image">
+            <div class="cart-item-details">
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-price">RM ${item.price.toFixed(2)}</div>
+              <div style="color: #1a1a1a; font-weight: 600; margin-top: 8px;">Subtotal: <span style="color: #C99797;">RM ${itemTotal.toFixed(2)}</span></div>
+              <div class="quantity-control">
+                <span class="quantity-label">Qty:</span>
+                <button class="quantity-btn" onclick="decreaseQuantity(${index})">−</button>
+                <span class="quantity-value">${item.quantity}</span>
+                <button class="quantity-btn" onclick="increaseQuantity(${index})">+</button>
+                <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+              </div>
+            </div>
+          </div>
+        `;
+        cartItemsContainer.innerHTML += cartItemHTML;
+      });
+
+      updateSummary();
+    }
+
+    // Increase quantity
+    function increaseQuantity(index) {
+      cart[index].quantity++;
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart();
+    }
+
+    // Decrease quantity
+    function decreaseQuantity(index) {
+      if (cart[index].quantity > 1) {
+        cart[index].quantity--;
+      } else {
+        removeFromCart(index);
+        return;
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart();
+    }
+
+    // Remove from cart
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart();
+      updateCartBadge();
+    }
+
+    // Update summary
+    function updateSummary() {
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      const shipping = cart.length > 0 ? 5 : 0;
+      const tax = subtotal * 0.06;
+      const total = subtotal + shipping + tax;
+
+      document.getElementById('subtotal').textContent = 'RM ' + subtotal.toFixed(2);
+      document.getElementById('shipping').textContent = 'RM ' + shipping.toFixed(2);
+      document.getElementById('tax').textContent = 'RM ' + tax.toFixed(2);
+      document.getElementById('total').textContent = 'RM ' + total.toFixed(2);
+    }
+
+    // Update cart badge
+    function updateCartBadge() {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      document.getElementById('cartBadge').textContent = totalItems;
+    }
+
+    // Proceed to checkout - REDIRECT TO CHECKOUT.HTML
+    function proceedToCheckout() {
+      if (!cart || cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+
+      // Ensure cart is up-to-date in localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Optionally save a checkout timestamp
+      localStorage.setItem('checkout_at', new Date().toISOString());
+
+      // Redirect to checkout page
+      window.location.href = 'checkout.html';
+    }
+
+    // Initialize on page load
+    displayCart();
+    updateCartBadge();
+  </script>
+  
+  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+  <input name="animation" type="hidden">
+</body>
+</html>

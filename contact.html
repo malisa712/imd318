@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.1.12, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/whatsapp20image202026-06-2620at2012.16.3720am201-295x173.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  <title>Contact</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Satisfy:400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy:400&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Cinzel:400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel:400,500,600,700,800,900&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Karla:200,300,400,500,600,700,800,200i,300i,400i,500i,600i,700i,800i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:200,300,400,500,600,700,800,200i,300i,400i,500i,600i,700i,800i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=ag28HI"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=ag28HI" type="text/css">
+
+  <style>
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; } 
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; } 
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideInLeft {
+      from { transform: translateX(-60px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      from { transform: translateX(60px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 8px 20px rgba(201, 151, 151, 0.2); }
+      50% { box-shadow: 0 12px 30px rgba(201, 151, 151, 0.4); }
+    }
+
+    /* === BACKGROUND === */
+    body {
+      background-image: url('assets/images/background4.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      margin: 0;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .cart-badge {
+      position: absolute;
+      background: #5c2929;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: -10px;
+      margin-left: 8px;
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    /* Contact Page Styling */
+    .contact-header {
+      background: linear-gradient(135deg, #C99797 0%, #B88888 100%);
+      padding: 80px 20px;
+      text-align: center;
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .contact-header h1 {
+      font-family: 'Cinzel', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    .contact-header p {
+      font-family: 'Karla', sans-serif;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      animation: slideUp 0.8s ease-out 0.1s both;
+    }
+
+    .contacts-section {
+      padding: 80px 20px;
+      background: rgba(201, 151, 151, 0.4);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .contacts-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .contact-item {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(201, 151, 151, 0.15);
+      transition: all 0.3s ease;
+      border-top: 5px solid #C99797;
+      animation: bounceIn 0.6s ease-out;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(201, 151, 151, 0.25);
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .contact-item-icon {
+      font-size: 56px;
+      margin-bottom: 20px;
+      animation: slideUp 0.8s ease-out;
+    }
+
+    .contact-item h3 {
+      font-family: 'Karla', sans-serif;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+      animation: slideDown 0.6s ease-out;
+    }
+
+    .contact-item p {
+      font-family: 'Karla', sans-serif;
+      color: #1a1a1a;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      animation: slideUp 0.6s ease-out 0.1s both;
+    }
+
+    .contact-item a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(135deg, #C99797 0%, #B88888 100%);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      animation: bounceIn 0.6s ease-out 0.2s both;
+    }
+
+    .contact-item a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(201, 151, 151, 0.3);
+    }
+
+    .contact-item .more-btn {
+      background: linear-gradient(135deg, #C99797 0%, #B88888 100%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Karla', sans-serif;
+      font-size: 14px;
+      animation: bounceIn 0.6s ease-out 0.2s both;
+    }
+
+    .contact-item .more-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(201, 151, 151, 0.3);
+    }
+
+    .contact-form-section {
+      background: white;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(201, 151, 151, 0.15);
+      border-left: 5px solid #6d1414;
+      animation: slideUp 0.8s ease-out;
+    }
+
+    .contact-form-section h2 {
+      font-family: 'Karla', sans-serif;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 28px;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      animation: slideDown 0.6s ease-out;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+      animation: slideUp 0.6s ease-out;
+    }
+
+    .form-group label {
+      font-family: 'Karla', sans-serif;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #C99797;
+      border-radius: 8px;
+      font-family: 'Karla', sans-serif;
+      font-size: 14px;
+      color: #1a1a1a;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #B88888;
+      box-shadow: 0 0 0 3px rgba(201, 151, 151, 0.1);
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    .form-group textarea { 
+      resize: vertical; 
+      min-height: 120px; 
+    }
+
+    .submit-button {
+      background: linear-gradient(135deg, #C99797 0%, #B88888 100%);
+      color: white;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 8px;
+      font-family: 'Karla', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      animation: bounceIn 0.6s ease-out;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(201, 151, 151, 0.3);
+      animation: pulse 0.6s ease-in-out infinite;
+    }
+
+    /* Success popup modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 3000;
+      animation: fadeIn 0.3s ease-out;
+    }
+    .modal-overlay.show { display: flex; }
+
+    .modal-panel {
+      background: white;
+      border-radius: 12px;
+      padding: 40px 28px;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      text-align: center;
+      font-family: 'Karla', sans-serif;
+      animation: slideUp 0.4s ease-out;
+    }
+
+    .modal-panel h3 { 
+      margin: 0 0 8px; 
+      font-size: 22px; 
+      color: #1a1a1a; 
+      font-weight: 700;
+    }
+
+    .modal-panel p { 
+      margin: 0 0 18px; 
+      color: rgba(0,0,0,0.7);
+      font-size: 14px;
+    }
+
+    .modal-panel .ok-btn {
+      background: linear-gradient(90deg,#C99797,#B88888);
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      animation: bounceIn 0.6s ease-out;
+    }
+
+    .modal-panel .ok-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(201, 151, 151, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      .contact-form-section { padding: 24px; }
+      .contact-header h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu menu3 cid-vnHQsfwFBZ" once="menu" id="menu03-3a">
+    <nav class="navbar navbar-dropdown navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="index.html">
+              <img src="assets/images/whatsapp20image202026-06-2620at2012.16.3720am201-295x173.png" alt="logo" style="height: 5rem;">
+            </a>
+          </span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black show text-primary display-4" href="menu.html" aria-expanded="false">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black text-primary display-4" href="aboutus.html">About us</a>
+            </li>
+          </ul>
+          <div class="icons-menu">
+            <a class="iconfont-wrapper" href="contact.html">
+              <span class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
+            </a>
+            <a class="iconfont-wrapper" href="emel.html">
+              <span class="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
+            </a>
+            <a class="iconfont-wrapper" href="location.html">
+              <span class="p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span>
+            </a>
+            <a class="iconfont-wrapper" href="cart.html" id="cartIcon" style="position: relative;">
+              <span class="p-2 mbr-iconfont mobi-mbri-shopping-cart mobi-mbri"></span>
+              <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Contact Header -->
+  <div class="contact-header">
+    <div>
+      <h1>📞 Get in Touch</h1>
+      <p>We'd love to hear from you. Reach out to us anytime!</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contacts-section">
+    <div class="contacts-container">
+      <!-- Contact Items Grid -->
+      <div class="contact-items-grid">
+        <!-- WhatsApp Card -->
+        <div class="contact-item">
+          <div class="contact-item-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>Chat with us directly</p>
+          <a href="https://wa.me/60136251196" target="_blank" rel="noopener noreferrer">
+            💬 Send Message
+          </a>
+        </div>
+
+        <!-- Email Card -->
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <h3>Email</h3>
+          <p>Get in touch via email</p>
+          <a href="mailto:misyamdessert@gmail.com">
+            📧 Send Email
+          </a>
+        </div>
+
+        <!-- Location Card -->
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <h3>Location</h3>
+          <p>Visit our shop</p>
+          <button class="more-btn" onclick="window.location.href='location.html'">
+            🗺️ View Location
+          </button>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-section">
+        <h2>📝 Send us a Message</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="emailField">Email</label>
+            <input type="email" id="emailField" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+          </div>
+          <div class="form-group">
+            <label for="messageField">Message</label>
+            <textarea id="messageField" name="message" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="submit-button">🚀 Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success modal -->
+  <div id="successModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="successTitle" aria-hidden="true">
+    <div class="modal-panel" role="document">
+      <h3 id="successTitle">✅ Successfully sent</h3>
+      <p>Your message has been sent. We'll be in touch soon!</p>
+      <button class="ok-btn" id="modalOkBtn">OK</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <section data-bs-version="5.1" class="footer4 cid-vnHR64FALP" once="footers" id="footer04-3b">
+    <div class="container">
+      <div class="media-container-row align-center mbr-white">
+        <div class="col-12">
+          <p class="mbr-text mb-0 mbr-fonts-style display-7">© misyamdessert 🍰 | Made with ❤️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;">
+    <a href="https://mobiri.se/4888048" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;">
+      <img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+    </a>
+    <p style="margin: 0;text-align: center;" class="display-7">&#8204;</p>
+    <a style="z-index:1" href="https://mobirise.com"> Website Software</a>
+  </section>
+
+  <script>
+    // Update cart badge
+    function updateCartBadge() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const badge = document.getElementById('cartBadge');
+      const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+      
+      if (totalItems > 0) {
+        badge.textContent = totalItems;
+        badge.style.display = 'flex';
+      } else {
+        badge.style.display = 'none';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartBadge();
+
+      // Form submit handling to show success popup
+      const form = document.getElementById('contactForm');
+      const modal = document.getElementById('successModal');
+      const modalOk = document.getElementById('modalOkBtn');
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        // Basic validation
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('emailField').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('messageField').value.trim();
+        
+        if (!name || !email || !subject || !message) {
+          alert('Please fill in all fields.'); 
+          return;
+        }
+        
+        // Email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+
+        // Show success modal
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+
+        // Reset form
+        form.reset();
+
+        // Log for debugging
+        console.log('Contact form submitted', { name, email, subject, message });
+      });
+
+      // Close modal
+      function closeModal(){
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+      
+      modalOk.addEventListener('click', closeModal);
+
+      // Close if click outside panel
+      modal.addEventListener('click', function(e){
+        if (e.target === modal) closeModal();
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+      });
+    });
+  </script>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script src="assets/parallax/jarallax.js"></script>  
+<script src="assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="assets/ytplayer/index.js"></script>  
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="assets/theme/js/script.js"></script>  
+
+ <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+  </body>
+</html>
